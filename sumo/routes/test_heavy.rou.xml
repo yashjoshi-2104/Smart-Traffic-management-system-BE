@@ -1,0 +1,2 @@
+# Generate with randomTrips for heavy traffic:
+# python $env:SUMO_HOME/tools/randomTrips.py -n sumo/networks/simple_intersection.net.xml -r sumo/routes/test_heavy.rou.xml --begin 0 --end 600 --period 1 --binomial 3

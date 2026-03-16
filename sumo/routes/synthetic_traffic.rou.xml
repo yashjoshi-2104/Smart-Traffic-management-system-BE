@@ -1,0 +1,2 @@
+# Generate with randomTrips:
+# python $env:SUMO_HOME/tools/randomTrips.py -n sumo/networks/simple_intersection.net.xml -r sumo/routes/synthetic_traffic.rou.xml --begin 0 --end 3600 --period 2 --binomial 4

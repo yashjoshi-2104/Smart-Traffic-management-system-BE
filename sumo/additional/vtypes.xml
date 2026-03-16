@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    
+    <vType id="passenger" accel="2.6" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="33.0" guiShape="passenger"/>
+    <vType id="truck" accel="1.3" decel="4.0" sigma="0.5" length="12.0" minGap="3.0" maxSpeed="25.0" guiShape="truck"/>
+    <vType id="motorcycle" accel="3.0" decel="5.0" sigma="0.3" length="2.5" minGap="1.5" maxSpeed="40.0" guiShape="motorcycle"/>
+    <vType id="bus" accel="1.2" decel="4.0" sigma="0.5" length="15.0" minGap="3.0" maxSpeed="20.0" guiShape="bus"/>
+    
+</additional>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Traffic light programs (Fixed-time) -->
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    
+    <!-- Fixed-time program for center intersection -->
+    <tlLogic id="center" type="static" programID="fixed_time" offset="0">
+        <!-- Phase 0: North-South Green (30s) -->
+        <phase duration="30" state="GGGGrrrrGGGGrrrr"/>
+        
+        <!-- Phase 1: North-South Yellow (5s) -->
+        <phase duration="5"  state="yyyyrrrryyyyrrrr"/>
+        
+        <!-- Phase 2: East-West Green (30s) -->
+        <phase duration="30" state="rrrrGGGGrrrrGGGG"/>
+        
+        <!-- Phase 3: East-West Yellow (5s) -->
+        <phase duration="5"  state="rrrryyyyrrrryyyy"/>
+    </tlLogic>
+    
+    <!-- Adaptive program (will be controlled via TraCI) -->
+    <tlLogic id="center" type="actuated" programID="adaptive" offset="0">
+        <!-- Phase 0: North-South Green (min 10s, max 60s) -->
+        <phase duration="30" minDur="10" maxDur="60" state="GGGGrrrrGGGGrrrr"/>
+        
+        <!-- Phase 1: North-South Yellow (5s fixed) -->
+        <phase duration="5"  state="yyyyrrrryyyyrrrr"/>
+        
+        <!-- Phase 2: East-West Green (min 10s, max 60s) -->
+        <phase duration="30" minDur="10" maxDur="60" state="rrrrGGGGrrrrGGGG"/>
+        
+        <!-- Phase 3: East-West Yellow (5s fixed) -->
+        <phase duration="5"  state="rrrryyyyrrrryyyy"/>
+    </tlLogic>
+    
+</additional>
+```
+
+---
+
+## 📂 **sumo/outputs/**
+
+### **.gitkeep**
+```
+# This file keeps the outputs directory in git
+# All simulation outputs will be ignored by .gitignore

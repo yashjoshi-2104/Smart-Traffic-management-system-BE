@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+    <route id="route_ns" edges="A1A0 A0B0"/>
+    <route id="route_sn" edges="A0A1 A1B1"/>
+    <route id="route_ew" edges="B0A0 A0A1"/>
+    <route id="route_we" edges="A0B0 B0B1"/>
+    
+    <vehicle id="v_0" type="passenger" route="route_ns" depart="5.00" color="1,0,0"/>
+    <vehicle id="v_1" type="passenger" route="route_sn" depart="8.00" color="0,1,0"/>
+    <vehicle id="v_2" type="passenger" route="route_ew" depart="12.00" color="0,0,1"/>
+    <vehicle id="v_3" type="passenger" route="route_we" depart="15.00" color="1,1,0"/>
+    <vehicle id="v_4" type="passenger" route="route_ns" depart="20.00" color="1,0,0"/>
+    <vehicle id="v_5" type="passenger" route="route_sn" depart="25.00" color="0,1,0"/>
+    <vehicle id="v_6" type="passenger" route="route_ew" depart="30.00" color="0,0,1"/>
+    <vehicle id="v_7" type="passenger" route="route_we" depart="35.00" color="1,1,0"/>
+    <vehicle id="v_8" type="passenger" route="route_ns" depart="40.00" color="1,0,0"/>
+    <vehicle id="v_9" type="passenger" route="route_sn" depart="45.00" color="0,1,0"/>
+    <vehicle id="v_10" type="passenger" route="route_ew" depart="50.00" color="0,0,1"/>
+    
+</routes>
