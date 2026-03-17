@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     
+    <!-- Vehicle type definition -->
+    <vType id="passenger" accel="2.6" decel="4.5" sigma="0.5" length="5.0" maxSpeed="30.0"/>
+    
+    <!-- Routes -->
     <route id="route_ns" edges="A1A0 A0B0"/>
     <route id="route_sn" edges="A0A1 A1B1"/>
     <route id="route_ew" edges="B0A0 A0A1"/>
     <route id="route_we" edges="A0B0 B0B1"/>
     
+    <!-- Vehicles -->
     <vehicle id="v_0" type="passenger" route="route_ns" depart="5.00" color="1,0,0"/>
     <vehicle id="v_1" type="passenger" route="route_sn" depart="8.00" color="0,1,0"/>
     <vehicle id="v_2" type="passenger" route="route_ew" depart="12.00" color="0,0,1"/>
