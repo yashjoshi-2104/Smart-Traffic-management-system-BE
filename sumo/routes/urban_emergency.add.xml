@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Emergency Vehicle Flows — Urban Arterial Network
+    jmDriveAfterRedTime + jmIgnoreFoeProb make vehicles pass through
+    red lights and blocked junctions without any TraCI override needed.
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <vType id="emergency"
+           vClass="emergency"
+           accel="3.50" decel="6.00" sigma="0.0"
+           length="6.00" minGap="1.00" maxSpeed="30.00"
+           tau="0.80" speedFactor="1.5" speedDev="0"
+           guiShape="emergency" color="1,0,0"
+           impatience="1.0"
+           jmIgnoreFoeProb="1.0"
+           jmIgnoreFoeSpeed="100.0"
+           jmDriveAfterRedTime="100"
+jmIgnoreJunctionFoeProb="1.0"
+           jmDriveRedSpeed="15.0"/>
+
+    <!-- Main arterial routes (no gateway issues) -->
+<route id="emerg_we_main" edges="A1B1 B1C1"/>
+<route id="emerg_ew_main" edges="C1B1 B1A1"/>
+
+<!-- W→E every 180s starting at 120s -->
+<flow id="emerg_we_1" type="emergency" route="emerg_we_main"
+      begin="120" end="3600" period="180"
+      departLane="free" departSpeed="max"/>
+
+<!-- E→W every 180s starting at 210s -->
+<flow id="emerg_ew_1" type="emergency" route="emerg_ew_main"
+      begin="210" end="3600" period="180"
+      departLane="free" departSpeed="max"/>
+
+</routes>
+

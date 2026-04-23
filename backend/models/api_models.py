@@ -10,7 +10,7 @@ from typing import Optional, Dict, List, Any
 # Request Models
 class StartSimulationRequest(BaseModel):
     """Request to start simulation"""
-    config_file: Optional[str] = "../sumo/configs/tls_test.sumocfg"
+    config_file: Optional[str] = None  # ✅ No default — network config managed by DualSimManager
 
 
 class SetModeRequest(BaseModel):
@@ -22,6 +22,11 @@ class ManualPhaseRequest(BaseModel):
     """Request to manually set signal phase"""
     tls_id: str
     phase: int
+
+
+class GUIOpenRequest(BaseModel):
+    """Request to instantly open SUMO-GUI for a running simulation"""
+    target: str  # 'baseline' or 'rl'
 
 
 # Response Models

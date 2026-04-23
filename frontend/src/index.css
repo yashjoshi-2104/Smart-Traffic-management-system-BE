@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  background: #f7f6f1;
+  color: #18181b;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar — amber signal colour ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #f2f1ec; }
+::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #d97706; }
+
+::selection { background: rgba(29,78,216,0.15); color: #1d4ed8; }
+
+/* ── CSS Variables ── */
+:root {
+  --page-bg:      #f7f6f1;
+  --panel-bg:     #ffffff;
+  --panel-alt:    #f2f1ec;
+  --topbar:       #18181b;
+  --border:       #e2ddd5;
+  --border-strong:#c8c3ba;
+
+  --baseline:     #1d4ed8;
+  --baseline-bg:  #eff6ff;
+  --baseline-mid: #dbeafe;
+  --rl:           #15803d;
+  --rl-bg:        #f0fdf4;
+  --rl-mid:       #dcfce7;
+  --danger:       #b91c1c;
+  --danger-bg:    #fef2f2;
+
+  --text-primary:   #18181b;
+  --text-secondary: #3f3f46;
+  --text-muted:     #71717a;
+  --text-dim:       #a1a1aa;
+
+  /* Traffic light signal colours */
+  --t-red:       #dc2626;
+  --t-red-bg:    rgba(220,38,38,0.08);
+  --t-red-glow:  rgba(220,38,38,0.3);
+  --t-amber:     #f59e0b;
+  --t-amber-bg:  rgba(245,158,11,0.08);
+  --t-amber-glow:rgba(245,158,11,0.3);
+  --t-green:     #16a34a;
+  --t-green-bg:  rgba(22,163,74,0.08);
+  --t-green-glow:rgba(22,163,74,0.3);
+
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Outfit', sans-serif;
+}
+
+/* ── Global keyframes ── */
+@keyframes signal-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--t-green-glow); }
+  50%       { opacity: 0.6; box-shadow: 0 0 12px var(--t-green-glow); }
+}
+@keyframes amber-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--t-amber-glow); }
+  50%       { opacity: 0.5; box-shadow: 0 0 14px var(--t-amber-glow); }
+}
+@keyframes red-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--t-red-glow); }
+  50%       { opacity: 0.5; box-shadow: 0 0 16px var(--t-red-glow); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

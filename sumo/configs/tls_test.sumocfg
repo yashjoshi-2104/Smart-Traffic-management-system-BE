@@ -3,12 +3,12 @@
 
     <input>
         <net-file value="../networks/single_tls_intersection.net.xml"/>
-        <route-files value="../routes/tls_test_traffic.rou.xml"/>
+        <route-files value="../routes/continuous_traffic.rou.xml,../routes/emergency.add.xml"/>
     </input>
 
     <time>
         <begin value="0"/>
-        <end value="300"/>
+        <end value="3600"/>
     </time>
 
     <processing>
@@ -16,8 +16,10 @@
     </processing>
 
     <report>
-        <no-warnings value="true"/>
-        <no-step-log value="true"/>
+        <no-warnings value="false"/>
+        <no-step-log value="false"/>
+        <verbose value="true"/>
+        <error-log value="sumo_errors.log"/>
     </report>
 
 </configuration>

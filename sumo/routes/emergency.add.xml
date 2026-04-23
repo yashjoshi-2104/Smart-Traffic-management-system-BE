@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <!-- Emergency Vehicle Type Definition -->
+    <vType id="emergency" vClass="emergency" color="1,0,0" 
+           speedFactor="1.5" speedDev="0" guiShape="emergency"/>
+    
+    <!-- Emergency Vehicle Routes -->
+    <route id="emergency_ns" edges="north_in south_out"/>
+    <route id="emergency_sn" edges="south_in north_out"/>
+    <route id="emergency_ew" edges="east_in west_out"/>
+    <route id="emergency_we" edges="west_in east_out"/>
+    
+    <!-- Emergency Vehicle Flows (spawn every 180 seconds starting at 120s) -->
+    <flow id="emergency_flow_ns" type="emergency" route="emergency_ns" 
+          begin="120" end="3600" period="180" departLane="best"/>
+    <flow id="emergency_flow_sn" type="emergency" route="emergency_sn" 
+          begin="150" end="3600" period="180" departLane="best"/>
+    <flow id="emergency_flow_ew" type="emergency" route="emergency_ew" 
+          begin="180" end="3600" period="180" departLane="best"/>
+    <flow id="emergency_flow_we" type="emergency" route="emergency_we" 
+          begin="210" end="3600" period="180" departLane="best"/>
+</routes>
